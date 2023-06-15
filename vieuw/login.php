@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "config.php/db_conn.php";
+include "../config.php/db_conn.php";
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
 
@@ -15,10 +15,10 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     $pass = validate($_POST['password']);
 
     if (empty($uname)) {
-        header("Location: index.php?error=Gebruikersnaam is verplicht");
+        header("Location: ../vieuw/index.php?error=Gebruikersnaam is verplicht");
         exit();
     } else if (empty($pass)) {
-        header("Location: index.php?error=Wachtwoord is verplicht");
+        header("Location: ../vieuw/index.php?error=Wachtwoord is verplicht");
         exit();
     } else {
         // Gebruik voor het ophalen van de gebruiker uit de database het gebonden parameters om SQL-injectie te voorkomen
@@ -37,7 +37,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
                 $_SESSION['id'] = $row['id'];
 
                 if ($row['rol'] === 'admin') {
-                    header("Location: admin/admin.php");
+                    header("Location: ../admin/admin.php");
                     exit();
                 } else if ($row['rol'] === 'medewerker') {
                     header("Location: home.php");
