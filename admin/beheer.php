@@ -95,7 +95,7 @@ $query_run = mysqli_query($conn, $query);
                     </a>
                 </li>
                 <li>
-                    <a href="logout.html">
+                    <a href="logout.php">
                         <i class="uil uil-signin"></i>
                         <span>Logout</span>
                     </a>

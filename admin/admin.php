@@ -82,7 +82,7 @@ if(isset($_SESSION['user_name'])) {
                     </a>
                 </li>
                 <li>
-                    <a href="logout.html">
+                    <a href="logout.php">
                         <i class="uil uil-signin"></i>
                         <span>Logout</span>
                     </a>
