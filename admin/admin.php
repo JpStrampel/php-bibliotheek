@@ -4,7 +4,7 @@ session_start();
 // Controleer of de gebruikersnaam is opgeslagen in de sessievariabele
 if(isset($_SESSION['user_name'])) {
     $gebruikersnaam = $_SESSION['user_name'];
-    echo "Welkom, $gebruikersnaam!";
+    
 } else {
     // Gebruikersnaam niet gevonden, stuur door naar de inlogpagina
     header("Location: ../vieuw/index.php");
@@ -38,7 +38,7 @@ if(isset($_SESSION['user_name'])) {
         <div class="logo">
             <h2>
                 <i class="uil uil-desktop"></i>
-                Admin menu
+                <?php echo "Welkom, $gebruikersnaam!"; ?>
             </h2>
         </div>
         <div class="sidebar-menu">
@@ -80,70 +80,7 @@ if(isset($_SESSION['user_name'])) {
                 <i class="uil uil-bars" id="menu-icon"></i>
                 Dashboard
             </h2>
-        </header>
-        <div class="center-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Accountbeheer
-                                    <a href="account.php" class="btn btn-primary float-end">Account toevoegen</a>
-                                </h4>
-                            </div>
-                            <div class="card-body table-container">
-                                <div class="row mb-3">
-                                    <form method="GET">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" name="search" placeholder="Search by ID or Name">
-                                            <button class="btn btn-outline-primary" type="submit">Search</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <table id="accounts-table" class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Gebruikersnaam</th>
-                                            <th>Wachtwoord</th>
-                                            <th>Naam</th>
-                                            <th>Rol</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        if (mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $users) {
-                                                ?>
-                                                <tr>
-                                                    <td><?= $users['id']; ?></td>
-                                                    <td><?= $users['user_name']; ?></td>
-                                                    <td><?= $users['password']; ?></td>
-                                                    <td><?= $users['name']; ?></td>
-                                                    <td><?= $users['rol']; ?></td>
-                                                    <td>
-                                                        
-                                                        <form action="code.php" method="POST" class="d-inline">
-                                                            <button type="submit" name="delete_student" value="<?= $users['id']; ?>" class="btn btn-danger btn-sm">Delete</button>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                                <?php
-                                            }
-                                        } else {
-                                            echo "<h5>No results found. Please try again.</h5>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <script>
         let sideBar = document.getElementById('sidebar');
