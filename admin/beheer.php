@@ -95,7 +95,7 @@ $query_run = mysqli_query($conn, $query);
                     </a>
                 </li>
                 <li>
-                    <a href="logout.php">
+                <a href="logout.php" onclick="return confirm('Weet je zeker dat je wilt uitloggen?')">
                         <i class="uil uil-signin"></i>
                         <span>Logout</span>
                     </a>
