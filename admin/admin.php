@@ -31,6 +31,8 @@ if(isset($_SESSION['user_name'])) {
             overflow-y: auto;
         }
     </style>
+<head>
+
 </head>
 
 <body>
@@ -44,32 +46,46 @@ if(isset($_SESSION['user_name'])) {
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <i class="uil uil-home"></i>
-                    <span>Home</span>
+                    <a href="admin.php">
+                        <i class="uil uil-home"></i>
+                        <span>Home</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="uil uil-search"></i>
-                    <span>Boek opzoeken</span>
+                    <a href="#">
+                        <i class="uil uil-search"></i>
+                        <span>Boek opzoeken</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="uil uil-book"></i>
-                    <span>Boek beheer</span>
+                    <a href="boek-beheer.html">
+                        <i class="uil uil-book"></i>
+                        <span>Boek beheer</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="uil uil-shopping-cart"></i>
-                    <span>Reseveren</span>
+                    <a href="reserveren.html">
+                        <i class="uil uil-shopping-cart"></i>
+                        <span>Reserveren</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="uil uil-book"></i>
-                    <span>Terugbrengen</span>
+                    <a href="terugbrengen.html">
+                        <i class="uil uil-book"></i>
+                        <span>Terugbrengen</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="uil uil-user-circle"></i>
-                    <span>Account</span>
+                    <a href="account.html">
+                        <i class="uil uil-user-circle"></i>
+                        <span>Account</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="uil uil-signin"></i>
-                    <span>Logout</span>
+                    <a href="logout.html">
+                        <i class="uil uil-signin"></i>
+                        <span>Logout</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -77,20 +93,18 @@ if(isset($_SESSION['user_name'])) {
     <div class="main-content" id="main-content">
         <header class="flex">
             <h2>
-                <i class="uil uil-bars" id="menu-icon"></i>
-                Dashboard
+            <?php echo "Welkom, $gebruikersnaam!"; ?>
             </h2>
+        </header>
+        
+
+    </div>
+
+</body>
+
+</html>
 
 
-    <script>
-        let sideBar = document.getElementById('sidebar');
-        let menuIcon = document.getElementById('menu-icon');
-        let mainContent = document.getElementById('main-content');
-
-        menuIcon.onclick = () => {
-            sideBar.classList.toggle('toggleMenu');
-            mainContent.classList.toggle('toggleContent');
-        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
