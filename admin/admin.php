@@ -12,9 +12,6 @@ if(isset($_SESSION['user_name'])) {
     exit();
 }
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +76,7 @@ if(isset($_SESSION['user_name'])) {
                     </a>
                 </li>
                 <li>
-                    <a href="account.html">
+                    <a href="beheer.php">
                         <i class="uil uil-user-circle"></i>
                         <span>Account</span>
                     </a>
@@ -96,7 +93,7 @@ if(isset($_SESSION['user_name'])) {
     <div class="main-content" id="main-content">
         <header class="flex">
             <h2>
-            <?php echo "Welkom, $gebruikersnaam!"; ?>
+            Home
             </h2>
         </header>
         
