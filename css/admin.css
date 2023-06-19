@@ -295,6 +295,7 @@ body {
 }
 
 .sidebar{
+  color: black;
   width: 270px;
   height: 100%;
   position: fixed;
@@ -641,6 +642,15 @@ thead :is(tr,td,th){
 
 .toggleContent{
   margin-left: 65px;
+}
+.sidebar-menu a span {
+  color: black;
+}
+.sidebar-menu a span, .sidebar-menu a i {
+  color: black;
+}
+.sidebar-menu a {
+  text-decoration: none !important;
 }
 
 
