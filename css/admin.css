@@ -340,7 +340,7 @@ body {
   font-size: 22px;
 }
 
-.sidebar-menu ul li:is(:hover,:first-child){
+.sidebar-menu ul li:is(:hover){
   background-color: var(--text-white);
   color: var(--main-color);
 }
@@ -651,6 +651,10 @@ thead :is(tr,td,th){
 }
 .sidebar-menu a {
   text-decoration: none !important;
+}
+.sidebar-menu ul li.active {
+  
+    background-color: white;
 }
 
 
