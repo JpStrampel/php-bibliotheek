@@ -10,11 +10,11 @@ if (isset($_POST['delete_student'])) {
 
     if ($query_run) {
         $_SESSION['message'] = "Account Deleted Successfully";
-        header("Location: admin.php");
+        header("Location: beheer.php");
         exit(0);
     } else {
         $_SESSION['message'] = "Account Not Deleted";
-        header("Location: admin.php");
+        header("Location: beheer.php");
         exit(0);
     }
 }
@@ -32,11 +32,11 @@ if (isset($_POST['update_student'])) {
 
     if ($query_run) {
         $_SESSION['message'] = "Account Updated Successfully";
-        header("Location: admin.php");
+        header("Location: beheer.php");
         exit(0);
     } else {
         $_SESSION['message'] = "Account Not Updated";
-        header("Location: admin.php");
+        header("Location: beheer.php");
         exit(0);
     }
 
@@ -57,11 +57,11 @@ if (isset($_POST['save_student'])) {
     $query_run = mysqli_query($conn, $query);
     if ($query_run) {
         $_SESSION['message'] = "Account Created Successfully";
-        header("Location: admin.php");
+        header("Location: beheer.php");
         exit(0);
     } else {
         $_SESSION['message'] = "Account Not Created";
-        header("Location: admin.php");
+        header("Location: beheer.php");
         exit(0);
     }
 }
