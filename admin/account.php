@@ -43,8 +43,11 @@ session_start();
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Rol</label>
-                                <input type="text" name="rol" class="form-control">
+                            <label>Rol</label>
+                            <select name="rol" class="form-control">
+                            <option value="admin">Admin</option>
+                            <option value="medewerker">Medewerker</option>
+                            </select>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="save_student" class="btn btn-primary">Account toevoegen</button>
