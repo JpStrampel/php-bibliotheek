@@ -57,8 +57,10 @@ require '../config.php/db_conn.php';
                                         <input type="text" name="phone" value="<?=$users['name'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Rol</label>
-                                        <input type="text" name="course" value="<?=$users['rol'];?>" class="form-control">
+                                    <select name="rol" class="form-control">
+                            <option value="admin">Admin</option>
+                            <option value="medewerker">Medewerker</option>
+                            </select>
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" name="update_student" class="btn btn-primary">
